@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>案列展示</title>
+		<meta name="description" content="这是一个 index 页面">
+		<meta name="keywords" content="index">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<script src="assets/js/echarts.min.js"></script>
+		<link rel="stylesheet" href="assets/css/amazeui.min.css" />
+		<link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />
+		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" href="assets/css/pager.css" />
+		<script src="assets/js/jquery.min.js"></script>
+		<style>
+			.am-input-group-btn>.am-btn {
+				position: relative;
+				color: white;
+				background-color: #49659a;
+			}
+			
+			.am-input-group-btn>.am-btn:hover {
+				background-color: #3e6dc6;
+			}
+			
+			.row-content {
+				background-color: #dfe4ee;
+				margin-top: -50px;
+			}
+			
+			.theme-white .widget-head {
+				border-bottom: none !important;
+			}
+			
+			.headingStyle {
+				height: 50px;
+				line-height: 50px;
+				background-color: #49659a;
+				width: 99%;
+				border-radius: 4px;
+				margin-bottom: 30px;
+				margin-top: -10px;
+			}
+			
+			.am-topbar-inverse .am-topbar-nav>li>a {
+				height: 75px;
+				line-height: 75px;
+				padding: 0 12px;
+			}
+			
+			.tpl-header-list-user-ico img {
+				margin-left: 5px;
+				margin-top: -4px;
+				height: 39px;
+				display: inline-block;
+				border-radius: 50%;
+			}
+			
+			ul.am-dropdown-content>li>a {
+				color: #96a5aa;
+				height: 20px;
+				line-height: 20px;
+				width: 400px;
+				padding: 12px 8px 12px 18px !important;
+				white-space: initial !important;
+				font-size: 12px !important;
+				display: table-cell !important;
+				border-bottom: 1px solid #F1F4F7;
+			}
+			
+			body {
+				font-size: 14px !important;
+			}
+			
+			.pageJump .button:hover:active {
+				color: white;
+				background-color: #337ab7;
+			}
+			
+			.theme-white .tpl-content-wrapper {
+				background: #dee4ee;
+			}
+			
+			.container-fluid {
+				background-color: #dfe4ee;
+				padding: 0 0 0 0;
+			}
+			
+			.row-content {
+				padding: 0 20px 0 20px;
+			}
+			
+			.productsDetail {
+				width: 200px;
+				height: 125px;
+				float: left;
+				background-color: #ffffff;
+				border-radius: 4px;
+				
+			}
+			
+			.detailpadding1 {
+				padding-top: 35px;
+				padding-left: 50px;
+			}
+			
+			.detailpadding2 {
+				padding-top: 35px;
+				padding-left: 6px;
+			}
+			
+			.detailpadding3 {
+				padding-top: 35px;
+				padding-left: 2px;
+			}
+			
+			.productsDetail:hover {
+				-webkit-transform: scale(1.2);
+				-o-transform: scale(1.2);
+			}
+			
+			.productAlink {
+				margin-top: 140px;
+				
+			}
+			.productAlink a {
+				margin-top: 140px;
+				color: #333333 !important;
+				margin-left: 16px;
+			}
+			.productAlink a:hover {
+				cursor: pointer;
+				color: #3E6DC6 !important;
+			}
+			.theme-black .tpl-content-wrapper {
+    background:#dfe4ee;
+}
+*{
+				font-size: 16px !important;
+			}
+			a{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body data-type="widgets">
+		<script src="assets/js/theme.js"></script>
+		<div class="am-g tpl-g">
+			<!-- 头部 -->
+			<header>
+				<!-- logo -->
+				<div class="am-fl tpl-header-logo">
+					<a href="javascript:;"><img src="assets/img/logo.png" alt=""></a>
+				</div>
+				<!-- 右侧内容 -->
+				<div class="tpl-header-fluid">
+					<!-- 侧边切换 -->
+					<div class="am-fl tpl-header-switch-button am-icon-list">
+						<span>
+
+                </span>
+					</div>
+					<!-- 搜索 -->
+					<div class="am-fl tpl-header-navbar">
+						<ul>
+							<!-- 欢迎语 -->
+							<li class="am-text-sm tpl-header-navbar-welcome am-align-left">
+								<a href="javascript:;">
+									<h2>GOMINE工作台</h2></a>
+							</li>
+						</ul>
+					</div>
+					<!-- 其它功能-->
+					<div class="am-fr tpl-header-navbar">
+						<ul>
+
+							<li class="am-dropdown" data-am-dropdown="" data-am-dropdown-toggle="">
+								<a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+									<span class="tpl-header-list-user-nick am-text-sm">&nbsp;清心</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
+								</a>
+								<ul class="am-dropdown-content">
+									<li>
+										<a href="#"><span class="am-icon-bell-o"></span> 资料</a>
+									</li>
+									<li>
+										<a href="#"><span class="am-icon-cog"></span> 设置</a>
+									</li>
+									<li>
+										<a href="#"><span class="am-icon-power-off"></span> 退出</a>
+									</li>
+								</ul>
+							</li>
+
+							<!-- 退出 -->
+							<li class="am-text-sm">
+								<a href="login.html">
+									<span class="am-icon-sign-out"></span> 退出
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</header>
+			<!-- 风格切换 -->
+			<div class="tpl-skiner">
+				<div class="tpl-skiner-toggle am-icon-cog">
+				</div>
+				<div class="tpl-skiner-content">
+					<div class="tpl-skiner-content-title">
+						选择主题
+					</div>
+					<div class="tpl-skiner-content-bar">
+						<span class="skiner-color skiner-white" data-color="theme-white"></span>
+						<span class="skiner-color skiner-black" data-color="theme-black"></span>
+					</div>
+				</div>
+			</div>
+			<!-- 侧边导航栏 -->
+			<div class="left-sidebar">
+
+				<!-- 菜单 -->
+				<ul class="sidebar-nav">
+
+					<li class="sidebar-nav-link">
+						<a href="index.html" >
+							<i class="am-icon-home sidebar-nav-link-logo"></i>数据信息
+						</a>
+					</li>
+					<li class="sidebar-nav-link">
+						<a href="skillUpgrate.html">
+							<i class="am-icon-table sidebar-nav-link-logo"></i>技能提升
+						</a>
+					</li>
+					<li class="sidebar-nav-link">
+						<a href="news.html">
+							<i class="am-icon-calendar sidebar-nav-link-logo"></i> 资讯文章
+						</a>
+					</li>
+					<li class="sidebar-nav-link">
+						<a href="products.html"class="active">
+							<i class="am-icon-wpforms sidebar-nav-link-logo"></i> 案例展示
+
+						</a>
+					</li>
+                </ul>
+
+			</div>
+
+			<!-- 内容区域 -->
+			<div class="tpl-content-wrapper">
+
+				<div class="container-fluid am-cf">
+
+					<!--<div class="row">
+						<div class=" am-u-md-4 ">
+							<div class="am-col col-lg-2">
+								<div class="am-input-group">
+									<input type="text" class="am-form-field">
+									<span class="am-input-group-btn">
+                                          <button class="am-btn am-btn-default am-btn-lg" type="button">搜索</button>
+                                    </span>
+								</div>
+							</div>
+						</div>
+
+					</div>-->
+
+				</div>
+				<div class="row">
+					<div class="row-content am-cf">
+						<div class="am-u-md-12 am-u-md-centered " style="height: 50px;line-height: 50px;background-color: #49659a;width: 99%;border-radius: 4px;margin-bottom: 30px;margin-top: 10px;">
+							<h4 style="color: white;    padding-left: 30px;">案例展示</h4>
+						</div>
+						<!--第一列数据-->
+						<div class="am-u-md-12">
+							<div class="am-u-md-12" >
+								<div class="am-u-md-2 am-center"style="margin-left: 20px;width: 220px;">
+									<div class="productsDetail detailpadding1 am-u-md-2">
+										<a onclick=window.open("http://www.gomine.cn/sap/digitalist/") ><img src="assets/img/gomine_sap.png" /></a>
+									</div>
+									<div class="productAlink am-center">
+										<a onclick=wwindow.open("http://www.gomine.cn/sap/digitalist/")>Ditigalist用户细分和推荐 </a>
+									</div>
+									
+								</div>
+
+								<!--第二张数据-->
+								<div class="am-u-md-2 am-center"style="margin-left: 20px;width: 220px;">
+									<div class="productsDetail detailpadding2 ">
+										<a href="http://icbc.icampaign.com.cn/index.php/Login/index.html"><img src="assets/img/gomine_11.png" /></a>
+									</div>
+									<div class="productAlink am-center"style="margin-left: 20px;">
+										<a onclick=window.open("http://icbc.icampaign.com.cn/index.php/Login/index.html") >网点选择推荐模型</a>
+									</div>
+								</div>
+								<!--第三章图片-->
+								<div class="am-u-md-2 am-center" style="margin-left: 20px;width: 220px;">
+									<div class="productsDetail detailpadding3  am-fl">
+										<a onclick=window.open("http://182.254.133.45/bmss/hlj/web/index.php")><img src="assets/img/gomine_12.png" /></a>
+
+									</div>
+									<div class="productAlink am-center">
+										<a onclick=window.open("http://182.254.133.45/bmss/hlj/web/index.php")>家庭宽带大数据营销系统 </a>
+									</div>
+								</div>
+
+								<div></div>
+							</div>
+
+							<!--第二列-->
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		</div>
+		<script src="assets/js/amazeui.min.js"></script>
+		<script src="assets/js/amazeui.datatables.min.js"></script>
+		<script src="assets/js/dataTables.responsive.min.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/pager.js"></script>
+
+		<script>
+			Page({
+				num: 7, //页码数
+				startnum: 6, //指定页码
+				elem: $('#page1'), //指定的元素
+				callback: function(n) { //回调函数
+					console.log(n);
+				}
+			});
+			Page({
+				num: 7, //页码数
+				startnum: 6, //指定页码
+				elem: $('#page2'), //指定的元素
+				callback: function(n) { //回调函数
+					console.log(n);
+				}
+			});
+			Page({
+				num: 7, //页码数
+				startnum: 6, //指定页码
+				elem: $('#page3'), //指定的元素
+				callback: function(n) { //回调函数
+					console.log(n);
+				}
+			});
+			Page({
+				num: 7, //页码数
+				startnum: 6, //指定页码
+				elem: $('#page4'), //指定的元素
+				callback: function(n) { //回调函数
+					console.log(n);
+				}
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>GOMINE工作台首页</title>
+		<meta name="description" content="这是一个 index 页面">
+		<meta name="keywords" content="index">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<script src="assets/js/echarts.min.js"></script>
+		<link rel="stylesheet" href="assets/css/amazeui.min.css" />
+		<link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />
+		<link rel="stylesheet" href="assets/css/app.css">
+		<script src="assets/js/jquery.min.js"></script>
+		<style>
+			.am-input-group-btn>.am-btn {
+				position: relative;
+				color: white;
+				background-color: #49659a;
+			}
+			
+			.am-input-group-btn>.am-btn:hover {
+				background-color: #3e6dc6;
+			}
+			
+			.row-content {
+				background-color: #dfe4ee;
+				margin-top: -40px;
+			}
+			
+			.theme-white .widget-head {
+				border-bottom: none !important;
+			}
+			
+			.headingStyle {
+				height: 50px;
+				line-height: 50px;
+				background-color: #49659a;
+				width: 99%;
+				border-radius: 4px;
+				margin-bottom: 30px;
+				margin-top: -10px;
+			}
+			
+			.am-topbar-inverse .am-topbar-nav>li>a {
+				height: 75px;
+				line-height: 75px;
+				padding: 0 12px;
+			}
+			
+			.tpl-header-list-user-ico img {
+				margin-left: 5px;
+				margin-top: -4px;
+				height: 39px;
+				display: inline-block;
+				border-radius: 50%;
+			}
+			
+			ul.am-dropdown-content>li>a {
+				color: #96a5aa;
+				height: 20px;
+				line-height: 20px;
+				width: 400px;
+				padding: 12px 8px 12px 18px !important;
+				white-space: initial !important;
+				font-size: 12px !important;
+				display: table-cell !important;
+				 border-bottom: 1px solid #F1F4F7;
+			}
+			*{
+				font-size: 16px !important;
+			}
+			a {
+    color:#666;
+    cursor: pointer;
+}
+       .theme-black .am-form-field {
+             color: #666;
+    background-color:#f7f7f7;
+          }
+		</style>
+	</head>
+
+	<body data-type="widgets">
+		<script src="assets/js/theme.js"></script>
+		<div class="am-g tpl-g">
+			<!-- 头部 -->
+			<header>
+				<!-- logo -->
+				<div class="am-fl tpl-header-logo">
+					<a href="javascript:;"><img src="assets/img/logo.png"width="125px"height="33px" alt=""></a>
+				</div>
+				<!-- 右侧内容 -->
+				<div class="tpl-header-fluid">
+					<!-- 侧边切换 -->
+					<div class="am-fl tpl-header-switch-button am-icon-list">
+						<span>
+
+                </span>
+					</div>
+					<!-- 搜索 -->
+					<div class="am-fl tpl-header-navbar">
+						<ul>
+							<!-- 欢迎语 -->
+							<li class="am-text-sm tpl-header-navbar-welcome am-align-left">
+								<a href="javascript:;">
+									<h2>GOMINE工作台</h2></a>
+							</li>
+						</ul>
+					</div>
+					<!-- 其它功能-->
+					<div class="am-fr tpl-header-navbar">
+						<ul>
+
+							<li class="am-dropdown" data-am-dropdown="" data-am-dropdown-toggle="">
+								<a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+									<span class="tpl-header-list-user-nick am-text-sm">&nbsp;清心</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
+								</a>
+								<ul class="am-dropdown-content">
+									<li>
+										<a href="#"><span class="am-icon-bell-o"></span> 资料</a>
+									</li>
+									<li>
+										<a href="#"><span class="am-icon-cog"></span> 设置</a>
+									</li>
+									<li>
+										<a href="#"><span class="am-icon-power-off"></span> 退出</a>
+									</li>
+								</ul>
+							</li>
+
+							<!-- 退出 -->
+							<li class="am-text-sm">
+								<a href="login.html">
+									<span class="am-icon-sign-out"></span> 退出
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</header>
+			<!-- 风格切换 -->
+			<div class="tpl-skiner">
+				<div class="tpl-skiner-toggle am-icon-cog">
+				</div>
+				<div class="tpl-skiner-content">
+					<div class="tpl-skiner-content-title">
+						选择主题
+					</div>
+					<div class="tpl-skiner-content-bar">
+						<span class="skiner-color skiner-white" data-color="theme-white"></span>
+						<span class="skiner-color skiner-black" data-color="theme-black"></span>
+					</div>
+				</div>
+			</div>
+			<!-- 侧边导航栏 -->
+			<div class="left-sidebar">
+
+				<!-- 菜单 -->
+				<ul class="sidebar-nav">
+
+					<li class="sidebar-nav-link">
+						<a href="index.html" class="active">
+							<i class="am-icon-home sidebar-nav-link-logo"></i>数据信息
+						</a>
+					</li>
+					<li class="sidebar-nav-link">
+						<a href="skillUpgrate.html">
+							<i class="am-icon-table sidebar-nav-link-logo"></i>技能提升
+						</a>
+					</li>
+					<li class="sidebar-nav-link">
+						<a href="news.html">
+							<i class="am-icon-calendar sidebar-nav-link-logo"></i> 资讯文章
+						</a>
+					</li>
+					<li class="sidebar-nav-link">
+						<a href="products.html">
+							<i class="am-icon-wpforms sidebar-nav-link-logo"></i> 案例展示
+
+						</a>
+					</li>
+                </ul>
+			</div>
+
+			<!-- 内容区域 -->
+			<div class="tpl-content-wrapper">
+
+				<div class="container-fluid am-cf">
+					<div class="row">
+						<div class=" am-u-md-4 ">
+							<div class="am-col col-lg-2">
+								<div class="am-input-group">
+									<input type="text" class="am-form-field" id="searchText">
+									
+									<span class="am-input-group-btn">
+                                          <button class="am-btn am-btn-default am-btn-lg" type="button" onclick="tiaozhuan()">搜索</button>
+                                    </span>
+                                    
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="row-content am-cf">
+
+						<div class="am-u-md-12 am-u-md-centered " style="height: 50px;line-height: 50px;background-color: #49659a;width: 99%;border-radius: 4px;margin-bottom: 30px;margin-top: 10px;">
+							<h4 style="color: white;    padding-left: 30px;">信息查询</h4>
+						</div>
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title  am-lg-text-center" style="color: #4065ad;font-size: 22px;">企业信息</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.gsxt.gov.cn/index.html"); >全国企业信用信息公示系统</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://hd.chinatax.gov.cn/fagui/action/InitCredit.do");>纳税信用纳税人名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.gjsy.gov.cn")>事业单位在线</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.qichacha.com/")>企查查-全国工商信息查询  </a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.qixin.com/")> 启信宝-全国工商信息查询 </a></td>
+											</tr>
+											
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+
+										</tbody>
+
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第二表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-lg-text-center" style="color: #ab7238;font-size: 22px;">招聘信息</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.zhipin.com/")>智联招聘</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("https://cn.100offer.com/")>100offer</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("https://www.lagou.com/")>拉钩</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("https://www.liepin.com/")>猎聘网</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://ts.zhaopin.com/")>智联招聘</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.51job.com/")>前程无忧</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.chinahr.com/")>中华英才</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.cjol.com/")>中国人才热线</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.jobcn.com/")>卓博招聘</a></td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a onclick=window.open("#")>>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第三表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-text-center" style="color: #389fab;font-size: 22px;">社交信息</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("https://www.linkedin.com/")>领英</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("https://weibo.com/")>微博</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第四表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-text-center" style="color:#a738ab ; font-size: 22px;">其他信息</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.xinnet.com/domain/domain_batch_check_new.jsp")>域名查询</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.apnic.net")>IP查询</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.beianbeian.com/allocation ")>IP报备查询</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.gpsspg.com/maps.htm")>经纬度查询</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.gpsspg.com/bs.htm")>基站查询</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<!--4x1第二列-->
+				<div class="row">
+					<div class="row-content am-cf">
+
+						<div class="am-u-md-12 am-u-md-centered " style="height: 50px;line-height: 50px;background-color: #49659a;width: 99%;border-radius: 4px;margin-bottom: 30px;margin-top: 10px;">
+							<h4 style="color: white;    padding-left: 30px;">企业名录</h4>
+						</div>
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title  am-lg-text-center" style="color: #4065ad;font-size: 22px;">行业名单</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("https://pf.amac.org.cn/open/comNotice")>银监会-金融结构名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.csrc.gov.cn/pub/newsite/zjjg/hfjgml/xqhfjgml/")>证监会-证券公司名单 </a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.circ.gov.cn/tabid/5254/Default.aspx")>保监会-保险公司名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.moe.gov.cn/srcsite/A03/moe_634/201706/t20170614_306900.html")>教育部-高校名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.cnta.gov.cn/was5/web/search?channelid=242887")>国家旅游局-旅游行业名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+
+										</tbody>
+
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第二表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-lg-text-center" style="color: #ab7238;font-size: 22px;">许可名单</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.miit.gov.cn/n1146312/index.html")>工信部-资质名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://zxgl.mofcom.gov.cn/front/getEnterprises")>商务部-直销企业名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://app1.sfda.gov.cn/datasearch/face3/dir.html")>国家食品药品监督管理总局 </a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://xukezheng.cbrc.gov.cn/ilicence/licence/licenceQuery.jsp")>金融许可证信息数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.bjda.gov.cn/eportal/ui?pageId=331157")>第三类医疗器械经营企业许可名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://hd.chinatax.gov.cn/fagui/action/InitShiWuSuo.do#")>税务师事务所</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第三表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-text-center" style="color: #389fab;font-size: 22px;">综合名单</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.sasac.gov.cn/n2588035/n2641579/n2641645/index.html")> 国资委-央企名单</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://fec.mofcom.gov.cn/article/qyml/")>商务部 -境外投资企业（机构）名录</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://fec.mofcom.gov.cn/article/qyml/")>商务部 -对外劳务合作企业名录</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://wszw.hzs.mofcom.gov.cn/fecp/zsma/corp/corp_ml_list.jsp")>商务部 -对外承包工程企业名录</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.hkex.com.hk/?sc_lang=en")>上市公司数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.amchamchina.org/membership-directory/")>美国商会-美资企业名录</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://v2.neeq.com.cn/nq/listedcompany.html")>挂牌公司</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://china.lhnb.gov.cn/")>外资企业数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://china.lhnb.gov.cn/search/")>外商数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.made-in-china.com/suppliers-discovery/")>Made in China(中文)</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.made-in-china.com/suppliers-discovery/")>Made in China</a></td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a onclick=window.open()>>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第四表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-text-center" style="color:#a738ab ; font-size: 22px;">排名名单</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.fortunechina.com/fortune500/c/2017-07/31/content_287415.htm")>财富-中国企业500强</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.cec-ceda.org.cn/c500/chinese/")>中国企业联合会-中国企业500强</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.wmzy.com/api/rank/schList")>学校排行</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.bestinvest.com.cn/GoodCorp_List.asp")>TW Top企业收集</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<!--4x1第三列-->
+				<div class="row">
+					<div class="row-content am-cf">
+
+						<div class="am-u-md-12 am-u-md-centered " style="height: 50px;line-height: 50px;background-color: #49659a;width: 99%;border-radius: 4px;margin-bottom: 30px;margin-top: 10px;">
+							<h4 style="color: white;    padding-left: 30px;">其他数据</h4>
+						</div>
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title  am-lg-text-center" style="color: #4065ad;font-size: 22px;">政务公开</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.bjdata.gov.cn/")>北京政务公开数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.datashanghai.gov.cn/")>上海政务公开数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://opendata.sz.gov.cn/")>深圳政务公开数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.wuhandata.gov.cn/")>武汉政务公开数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.datagz.gov.cn/")>广州政务公开数据</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+
+										</tbody>
+
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第二表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-lg-text-center" style="color: #ab7238;font-size: 22px;">开放数据</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("https://github.com/caesar0301/awesome-public-datasets")>github</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第三表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-text-center" style="color: #389fab;font-size: 22px;">其他数据</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!--第四表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-text-center" style="color:#a738ab ; font-size: 22px;">商业数据</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<!--4x1第四列-->
+				<div class="row">
+					<div class="row-content am-cf">
+
+						<div class="am-u-md-12 am-u-md-centered headingStyle">
+							<h4 style="color: white; margin-top: 20px;   padding-left: 30px;">宏观经济</h4>
+						</div>
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title  am-lg-text-center" style="color: #4065ad;font-size: 22px;">宏观经济</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD01")>各地区行政区划</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09")>国民经济核算指标</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09")>人口基本情况</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">固定资产投资概况</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">社会消费品零售总额</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">对外贸易和利用外资</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">国家财政收支</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">金融机构人民币信贷收支(年底余额)</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">居民消费价格指数(上年=100)</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">商品零售价格指数(上年=100)</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">农产品生产价格指数(上年＝100)</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">工业生产者出厂价格指数(上年＝100)</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">工业生产者购进价格分类指数(上年＝100)</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">居民人均可支配收入</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">农业基本情况</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">能源生产总量和构成</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">能源消费总量和构成</a></td>
+												<td><a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">建筑业企业概况</a></td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													
+												</td>
+												<td>
+													<a onclick=window.open("http://data.stats.gov.cn/tablequery.htm?code=AD09">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+
+						<!--第二表-->
+						<div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
+							<div class="widget am-cf">
+								<div class="widget-head am-cf">
+									<div class="widget-title am-text-center" style="color: #ab7238;font-size: 22px;">统计标准</div>
+
+								</div>
+								<div class="widget-body  widget-body-lg am-fr">
+
+									<table width="100%" class="am-table am-table-compact  tpl-table-black " id="example-r">
+										<tbody>
+											<tr class="gradeX">
+												<td><a onclick=window.open("http://www.stats.gov.cn/tjsj/tjbz/")>统计标准</a></td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX">
+												<td>none</td>
+											</tr>
+											<tr class="gradeX am-lg-text-right">
+												<td>
+													<a href="#">>>查看更多</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		</div>
+		<script src="assets/js/amazeui.min.js"></script>
+		<script src="assets/js/amazeui.datatables.min.js"></script>
+		<script src="assets/js/dataTables.responsive.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.min.js" ></script>
+		<script src="assets/js/app.js"></script>
+		<script type="text/javascript">
+			var tiaozhuan = function(){ 
+				var searchText= $("#searchText").val();
+				var searchUrl =encodeURI("searchDetail.html?mydata1="+searchText);
+                window.location.href =searchUrl; 
+                
+            } 
+		</script>
+
+	</body>
+
+</html>

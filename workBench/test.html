@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>left</title>
+		<style type="text/css">
+			li {
+				text-decoration: none; //去掉li前面的圆点  
+				list-style: none;
+				display: inline; //让li横向排列  
+				border: 1px solid #FFFFFF;
+				background-color: #3592D1;
+				padding: 3px;
+				color: white;
+				cursor: pointer;
+			}
+			
+			iframe {
+				border-width: 1px;
+				border-style: inset;
+				border-color: initial;
+				border-image: initial;
+			}
+		</style>
+		
+
+	</head>
+
+	<body>
+		<ul>
+			<input type="text" id="word" />
+			<button onclick="opens('https://www.baidu.com/s?word=');openstwo('https://www.sogou.com/web?query=');">综合搜索</button>
+			<li onclick="opens('https://www.baidu.com/s?word=')">baidu</li>
+			<li onclick="openstwo('https://www.sogou.com/web?query=')">sougou</li>
+
+		</ul>
+		
+
+	<table width="100%" cellspacing="0" cellpadding="0" border="0px">
+		<tr>
+
+			<td><iframe src="" id="main" width="100%" height="900px">
+    	<div id="hah">
+    		
+    	</div>
+    </iframe></td>
+			<td><iframe src="" id="maintwo" width="100%" height="900px"></iframe></td>
+		</tr>
+		<tr>
+
+		</tr>
+	</table>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script>
+		//	
+		//	$(document).ready(function(){
+		////$.ajax( {
+		////      url:$('#maintwo').src , //这里是静态页的地址
+		////      type: "GET", //静态页用get方法，否则服务器会抛出405错误
+		////      success: function(data){
+		////          var result = $(data).find("#content_left");
+		////          $("#hah").show(result);
+		////      }
+		////});
+		//
+		//
+		//          
+		//});
+		
+			function opens(url) {
+				parent.document.getElementById("main").src = url + document.getElementById("word").value;
+			}
+
+			function openstwo(url) {
+				parent.document.getElementById("main").src = url + document.getElementById("word").value;
+			}
+			
+			
+			var txt1 = document.getElementById("word");
+			 var searchUrl =window.location.href;
+			 var searchData =searchUrl.split("="); 
+			 var  searchText =decodeURI(searchData[1]);
+			txt1.value = searchText;
+			
+			parent.document.getElementById("main").src = 'https://www.baidu.com/s?word=' + document.getElementById("word").value;
+            parent.document.getElementById("maintwo").src = 'https://www.sogou.com/web?query='+ document.getElementById("word").value;
+			 
+	</script>
+</body>
+
+</html>
